@@ -18,4 +18,20 @@
     .nav-link.active {
         @apply bg-prototurk text-white
     }
+
+    .card {
+        @apply border transition-colors flex flex-col px-4 py-7 rounded items-center
+    }
+
+    .card-img {
+        @apply w-24 h-24 mb-4 border rounded-full grid place-items-center relative
+    }
+
+    .card-shadow {
+        @apply absolute -top-2 -right-2 w-24 h-24 rounded-full -z-1 scale-90
+    }
+
+    .card-name {
+        @apply inline-flex items-center rounded h-10 px-5 text-white
+    }
 }
