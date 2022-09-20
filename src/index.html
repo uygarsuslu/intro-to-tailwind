@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
-  <body class="h-full flex">
+  <body class="h-full flex flex-col">
     <!-- HEADER START -->
     <div
       class="h-15 w-full flex-shrink-0 border-b border-gray-100 flex justify-between items-center px-5"
@@ -27,9 +27,54 @@
       <a
         href="#"
         class="bg-prototurk text-white h-10 inline-flex items-center px-5 rounded"
-        >Giriş Yap</a
-      >
+        >Giriş Yap
+      </a>
     </div>
     <!-- HEADER END -->
+
+    <main class="flex h-full">
+      <!-- SIDEBAR START -->
+      <aside
+        class="flex flex-col w-64 p-3 border-r border-gray-100 divide-y divide-solid divide-gray-100 overflow-auto"
+      >
+        <!-- list-1 -->
+        <nav class="mb-3 space-y-1">
+          <a href="#" class="nav-link active">Anasayfa</a>
+          <a href="#" class="nav-link">Akış</a>
+          <a href="#" class="nav-link">Keşfet</a>
+          <a href="#" class="nav-link">Makaleler</a>
+          <a href="#" class="nav-link">Soru & Cevap</a>
+        </nav>
+
+        <!-- list-2 -->
+        <nav class="pt-3 space-y-1">
+          <a href="#" class="nav-link">HTML</a>
+          <a href="#" class="nav-link">CSS</a>
+          <a href="#" class="nav-link">JavaScript</a>
+          <a href="#" class="nav-link">PHP</a>
+          <a href="#" class="nav-link">MySQL</a>
+        </nav>
+
+        <!-- dark mode -->
+        <div class="mt-auto pt-3 !border-0">
+          <button
+            class="w-full bg-gray-800 text-white h-10 flex items-center px-4 rounded text-sm hover:bg-gray-600 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              width="24"
+              class="fill-current mr-3"
+            >
+              <path
+                d="M14 22q-2.05 0-3.875-.788-1.825-.787-3.187-2.15-1.363-1.362-2.151-3.187Q4 14.05 4 12q0-2.075.787-3.887.788-1.813 2.151-3.175Q8.3 3.575 10.125 2.787 11.95 2 14 2q1.35 0 2.625.35t2.375 1q-2.275 1.325-3.637 3.587Q14 9.2 14 12t1.363 5.062Q16.725 19.325 19 20.65q-1.1.65-2.375 1T14 22Z"
+              />
+            </svg>
+            <span>Koyu Mod</span>
+          </button>
+        </div>
+      </aside>
+      <!-- SIDEBAR END -->
+    </main>
   </body>
 </html>
