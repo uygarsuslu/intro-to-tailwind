@@ -25,7 +25,8 @@
         />
       </form>
       <a
-        href="#"
+        href="javascript:;"
+        onclick="modal('login-modal')"
         class="bg-prototurk text-white h-10 inline-flex items-center px-5 rounded dark:bg-twitter"
         >Giriş Yap
       </a>
@@ -263,6 +264,20 @@
       <!-- CONTENT END -->
     </main>
 
+    <!-- MODAL START -->
+    <div class="modal" id="login-modal">
+      <div class="modal-content">
+        <h3 class="text-2xl mb-4">Giriş Yap</h3>
+        <button
+          onclick="modal('login-modal')"
+          class="bg-prototurk px-6 inline-flex items-center rounded h-10 text-white dark:bg-twitter"
+        >
+          Kapat
+        </button>
+      </div>
+    </div>
+    <!-- MODAL END -->
+
     <script>
       // DARK MODE
       if (localStorage.getItem("dark")) {
@@ -275,6 +290,11 @@
         } else {
           localStorage.removeItem("dark");
         }
+      }
+
+      // modal
+      function modal(id) {
+        document.getElementById(id).classList.toggle("active");
       }
     </script>
   </body>
