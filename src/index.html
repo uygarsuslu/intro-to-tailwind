@@ -27,9 +27,38 @@
       <a
         href="javascript:;"
         onclick="modal('login-modal')"
-        class="bg-prototurk text-white h-10 inline-flex items-center px-5 rounded dark:bg-twitter"
+        class="bg-prototurk text-white h-10 hidden items-center px-5 rounded dark:bg-twitter"
         >Giriş Yap
       </a>
+
+      <!-- dropdown menu -->
+      <div class="group relative w-40">
+        <button class="flex items-center text-sm h-10 px-4">
+          <img
+            src="https://avatars.githubusercontent.com/u/87071421?s=40&v=4"
+            alt="profil picture"
+            width="24"
+            height="24"
+            class="rounded-full mr-3"
+          />uygarsuslu
+        </button>
+
+        <div
+          tabindex="0"
+          class="absolute opacity-0 invisible group-focus-within:opacity-100 group-focus-within:visible group-focus-within:mt-3 right-0 w-40 rounded p-1 bg-gray-100 space-y-1 transition-all dark:bg-gray-800 z-10"
+        >
+          <a href="#" class="dropdown-item">Profil</a>
+          <a href="#" class="dropdown-item">Profil Düzenle</a>
+          <a href="#" class="dropdown-item">Takipçiler</a>
+          <a href="#" class="dropdown-item">Sorular</a>
+          <a href="#" class="dropdown-item">Cevaplar</a>
+          <a
+            href="#"
+            class="dropdown-item hover:bg-red-600 dark:hover:bg-red-600"
+            >Çıkış Yap</a
+          >
+        </div>
+      </div>
     </div>
     <!-- HEADER END -->
 

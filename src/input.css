@@ -47,4 +47,7 @@
         @apply bg-white p-10 max-w-full min-w-[600px] rounded dark:bg-gray-800
     }
 
+    .dropdown-item {
+        @apply text-sm flex h-7 items-center px-2 transition-colors rounded hover:bg-gray-800 hover:text-white dark:hover:bg-gray-300 dark:hover:text-black
+    }
 }
