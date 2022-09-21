@@ -12,7 +12,7 @@
 
 @layer components {
     .nav-link {
-        @apply flex items-center h-10 rounded px-3 text-sm text-prototurk font-medium hover:bg-gray-300 transition-colors
+        @apply flex items-center h-10 rounded px-3 text-sm text-prototurk font-medium hover:bg-gray-300 transition-colors dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white
     }
 
     .nav-link.active {
@@ -20,7 +20,7 @@
     }
 
     .card {
-        @apply border transition-colors flex flex-col px-4 py-7 rounded items-center
+        @apply border transition-colors flex flex-col px-4 py-7 rounded items-center dark:border-gray-700
     }
 
     .card-img {

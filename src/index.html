@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
-  <body class="h-full flex flex-col">
+  <body class="h-full flex flex-col dark:bg-gray-900 dark:text-white">
     <!-- HEADER START -->
     <div
-      class="h-15 w-full flex-shrink-0 border-b border-gray-100 flex justify-between items-center px-5"
+      class="h-15 w-full flex-shrink-0 border-b border-gray-100 dark:border-gray-700 flex justify-between items-center px-5"
     >
       <a
         href="#"
-        class="text-2xl font-medium inline-flex items-center text-prototurk"
+        class="text-2xl font-medium inline-flex items-center text-prototurk dark:text-white"
         >./prototurk
         <span class="text-sm text-gray-400 font-normal ml-2">v2.5.1</span>
       </a>
@@ -21,12 +21,12 @@
         <input
           type="text"
           placeholder="Makalelerde Ara"
-          class="w-full bg-gray-100 h-10 px-3 placeholder-gray-500 rounded"
+          class="w-full bg-gray-100 h-10 px-3 placeholder-gray-500 rounded dark:bg-gray-700 dark:placeholder-gray-300"
         />
       </form>
       <a
         href="#"
-        class="bg-prototurk text-white h-10 inline-flex items-center px-5 rounded"
+        class="bg-prototurk text-white h-10 inline-flex items-center px-5 rounded dark:bg-twitter"
         >Giriş Yap
       </a>
     </div>
@@ -35,7 +35,7 @@
     <main class="flex h-full">
       <!-- SIDEBAR START -->
       <aside
-        class="flex flex-col w-64 p-3 border-r border-gray-100 divide-y divide-solid divide-gray-100 overflow-auto"
+        class="flex flex-col w-64 p-3 border-r border-gray-100 dark:border-gray-700 divide-y divide-solid divide-gray-100 dark:divide-gray-700 overflow-auto"
       >
         <!-- list-1 -->
         <nav class="mb-3 space-y-1">
@@ -58,7 +58,8 @@
         <!-- dark mode -->
         <div class="mt-auto pt-3 !border-0">
           <button
-            class="w-full bg-gray-800 text-white h-10 flex items-center px-4 rounded text-sm hover:bg-gray-600 transition-colors"
+            onclick="darkMode()"
+            class="w-full bg-gray-800 dark:bg-white text-white dark:text-gray-800 h-10 flex items-center px-4 rounded text-sm hover:bg-gray-600 dark:hover:bg-gray-300 transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +71,8 @@
                 d="M14 22q-2.05 0-3.875-.788-1.825-.787-3.187-2.15-1.363-1.362-2.151-3.187Q4 14.05 4 12q0-2.075.787-3.887.788-1.813 2.151-3.175Q8.3 3.575 10.125 2.787 11.95 2 14 2q1.35 0 2.625.35t2.375 1q-2.275 1.325-3.637 3.587Q14 9.2 14 12t1.363 5.062Q16.725 19.325 19 20.65q-1.1.65-2.375 1T14 22Z"
               />
             </svg>
-            <span>Koyu Mod</span>
+            <span class="hidden dark:inline">Açık Mod</span>
+            <span class="inline dark:hidden">Koyu Mod</span>
           </button>
         </div>
       </aside>
@@ -82,7 +84,7 @@
           <!-- title -->
           <div>
             <h2
-              class="text-3xl font-semibold text-prototurk mb-3 leading-relaxed"
+              class="text-3xl font-semibold text-prototurk dark:text-white mb-3 leading-relaxed"
             >
               Kendine değer kat!
             </h2>
@@ -260,5 +262,20 @@
       </section>
       <!-- CONTENT END -->
     </main>
+
+    <script>
+      // DARK MODE
+      if (localStorage.getItem("dark")) {
+        document.documentElement.classList.add("dark");
+      }
+      function darkMode() {
+        document.documentElement.classList.toggle("dark");
+        if (document.documentElement.classList.contains("dark")) {
+          localStorage.setItem("dark", true);
+        } else {
+          localStorage.removeItem("dark");
+        }
+      }
+    </script>
   </body>
 </html>
