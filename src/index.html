@@ -9,21 +9,40 @@
   <body class="h-full flex flex-col dark:bg-gray-900 dark:text-white">
     <!-- HEADER START -->
     <div
-      class="h-15 w-full flex-shrink-0 border-b border-gray-100 dark:border-gray-700 flex justify-between items-center px-5"
+      class="h-15 w-full flex-shrink-0 border-b border-gray-100 dark:border-gray-700 flex justify-between items-center px-3 lg:px-5"
     >
+      <!-- sidebar -->
+      <button onclick="sidebar()" class="text-prototurk lg:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          width="24"
+          class="fill-current"
+        >
+          <path d="M3 18v-2h18v2Zm0-5v-2h18v2Zm0-5V6h18v2Z" />
+        </svg>
+      </button>
+
+      <!-- logo -->
       <a
         href="#"
         class="text-2xl font-medium inline-flex items-center text-prototurk dark:text-white"
         >./prototurk
-        <span class="text-sm text-gray-400 font-normal ml-2">v2.5.1</span>
+        <span class="text-sm text-gray-400 font-normal ml-2 hidden lg:inline"
+          >v2.5.1</span
+        >
       </a>
-      <form action="" class="w-1/3">
+
+      <!-- placeholder -->
+      <form action="" class="w-1/3 hidden lg:block">
         <input
           type="text"
           placeholder="Makalelerde Ara"
           class="w-full bg-gray-100 h-10 px-3 placeholder-gray-500 rounded dark:bg-gray-700 dark:placeholder-gray-300"
         />
       </form>
+
+      <!-- login -->
       <a
         href="javascript:;"
         onclick="modal('login-modal')"
@@ -31,16 +50,25 @@
         >Giriş Yap
       </a>
 
-      <!-- dropdown menu -->
-      <div class="group relative w-40">
-        <button class="flex items-center text-sm h-10 px-4">
+      <!-- user detail -->
+      <div class="group relative">
+        <button class="flex items-center text-sm h-10">
           <img
             src="https://avatars.githubusercontent.com/u/87071421?s=40&v=4"
             alt="profil picture"
             width="24"
             height="24"
-            class="rounded-full mr-3"
-          />uygarsuslu
+            class="rounded-full"
+          />
+          <span class="hidden lg:inline ml-3">uygarsuslu</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            width="24"
+            class="fill-current"
+          >
+            <path d="m12 15-5-5h10Z" />
+          </svg>
         </button>
 
         <div
@@ -64,9 +92,7 @@
 
     <main class="flex h-full">
       <!-- SIDEBAR START -->
-      <aside
-        class="flex flex-col w-64 p-3 border-r border-gray-100 dark:border-gray-700 divide-y divide-solid divide-gray-100 dark:divide-gray-700 overflow-auto"
-      >
+      <aside class="sidebar">
         <!-- list-1 -->
         <nav class="mb-3 space-y-1">
           <a href="#" class="nav-link active">Anasayfa</a>
@@ -80,7 +106,7 @@
         <nav class="pt-3 space-y-1">
           <a href="#" class="nav-link">HTML</a>
           <a href="#" class="nav-link">CSS</a>
-          <a href="#" class="nav-link">JavaScript</a>
+          <a href="#" class="nav-link">Python</a>
           <a href="#" class="nav-link">PHP</a>
           <a href="#" class="nav-link">MySQL</a>
         </nav>
@@ -109,7 +135,7 @@
       <!-- SIDEBAR END -->
 
       <!-- CONTENT START -->
-      <section class="flex-auto py-6 px-10 overflow-auto">
+      <section class="flex-auto py-6 px-5 lg:px-10 overflow-auto">
         <div class="mx-auto max-w-screen-xl">
           <!-- title -->
           <div>
@@ -126,8 +152,10 @@
           </div>
 
           <!-- contents -->
-          <div class="grid grid-cols-10 mt-5 mb-5 gap-7">
-            <div class="col-span-2">
+          <div
+            class="flex lg:grid overflow-x-auto grid-cols-10 mt-5 mb-5 gap-16 lg:gap-7"
+          >
+            <div class="col-span-5 lg:col-span-2">
               <a href="#" class="card hover:border-red-700 group">
                 <span
                   class="card-img border-red-500 group-hover:border-red-700 transition-colors"
@@ -152,7 +180,7 @@
               </a>
             </div>
 
-            <div class="col-span-2">
+            <div class="col-span-5 lg:col-span-2">
               <a href="#" class="card hover:border-blue-700 group">
                 <span
                   class="card-img border-blue-500 group-hover:border-blue-700 transition-colors"
@@ -178,7 +206,7 @@
               </a>
             </div>
 
-            <div class="col-span-2">
+            <div class="col-span-5 lg:col-span-2">
               <a href="#" class="card hover:border-yellow-700 group">
                 <span
                   class="card-img border-yellow-500 group-hover:border-yellow-700 transition-colors"
@@ -199,12 +227,12 @@
 
                 <span
                   class="card-name bg-yellow-500 group-hover:bg-yellow-700 transition-colors"
-                  >JavaScript</span
+                  >Python</span
                 >
               </a>
             </div>
 
-            <div class="col-span-2">
+            <div class="col-span-5 lg:col-span-2">
               <a href="#" class="card hover:border-purple-700 group">
                 <span
                   class="card-img border-purple-500 group-hover:border-purple-700 transition-colors"
@@ -230,7 +258,7 @@
               </a>
             </div>
 
-            <div class="col-span-2">
+            <div class="col-span-5 lg:col-span-2">
               <a href="#" class="card hover:border-green-700 group">
                 <span
                   class="card-img border-green-500 group-hover:border-green-700 transition-colors"
@@ -258,8 +286,10 @@
           </div>
 
           <!-- twitter -->
-          <div class="bg-twitter p-5 rounded-md text-white flex items-center">
-            <div class="flex-shrink-0 w-20 pl-2">
+          <div
+            class="bg-twitter p-5 rounded-md text-white flex flex-col md:flex-row items-center"
+          >
+            <div class="flex-shrink-0 w-20 pl-2 mb-4 md:mb-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="40"
@@ -324,6 +354,11 @@
       // modal
       function modal(id) {
         document.getElementById(id).classList.toggle("active");
+      }
+
+      // sidebar
+      function sidebar() {
+        document.querySelector(".sidebar").classList.toggle("active");
       }
     </script>
   </body>

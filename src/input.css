@@ -19,6 +19,14 @@
         @apply bg-prototurk text-white
     }
 
+    .sidebar {
+        @apply bg-white dark:bg-gray-900 flex flex-col flex-shrink-0 w-full lg:w-64 absolute lg:relative inset-0 top-15 lg:top-0 opacity-0 lg:opacity-100 invisible lg:visible p-3 border-r border-gray-100 dark:border-gray-700 divide-y divide-solid divide-gray-100 dark:divide-gray-700 overflow-auto transition-all scale-90 lg:scale-100
+    }
+
+    .sidebar.active {
+        @apply z-10 opacity-100 visible scale-100
+    }
+
     .card {
         @apply border transition-colors flex flex-col px-4 py-7 rounded items-center dark:border-gray-700
     }
