@@ -4,10 +4,13 @@
   "description": "",
   "main": "tailwind.config.js",
   "scripts": {
-    "build":"npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "watch":"npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch --minify"
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch --minify"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "lodash": "^4.17.21"
+  }
 }
