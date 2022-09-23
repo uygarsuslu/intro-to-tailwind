@@ -44,7 +44,7 @@
     }
 
     .modal {
-        @apply fixed inset-0 bg-prototurk bg-opacity-60 flex items-center justify-center opacity-0 invisible transition-opacity
+        @apply fixed inset-0 bg-prototurk bg-opacity-60 flex items-center justify-center opacity-0 invisible transition-opacity z-10
     }
 
     .modal.active {
@@ -52,7 +52,7 @@
     }
 
     .modal-content {
-        @apply bg-white p-10 max-w-full min-w-[600px] rounded dark:bg-gray-800
+        @apply bg-white p-10 max-w-full min-w-[300px] md:min-w-[600px] lg:min-w-[900px] rounded dark:bg-gray-800
     }
 
     .dropdown-item {
